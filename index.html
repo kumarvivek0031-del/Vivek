@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DhanSetu - One Stop Financial Solution | Bokaro & Chas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#002B49',
+                        brandBlue: '#0066B2',
+                        accentBlue: '#00A8E8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy text-white text-xs py-2 px-4 text-center font-medium">
+        📍 Now Serving: <span class="text-accentBlue font-bold">Bokaro Steel City & Chas, Jharkhand</span> | Call / WhatsApp: <a href="tel:+919000000000" class="underline hover:text-accentBlue">+91 90000 00000</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="bg-brandBlue text-white p-2 rounded-lg font-bold text-xl tracking-wider">DS</div>
+                <div>
+                    <span class="text-2xl font-black text-navy tracking-tight">Dhan<span class="text-brandBlue">Setu</span></span>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">One Stop Financial Solution</p>
+                </div>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+                <a href="#services" class="hover:text-brandBlue transition">Services</a>
+                <a href="#partner" class="hover:text-brandBlue transition">Become a Partner</a>
+                <a href="#apply" class="hover:text-brandBlue transition">Apply Now</a>
+                <a href="#contact" class="hover:text-brandBlue transition">Contact</a>
+            </div>
+            <!-- CTA Button -->
+            <a href="#apply" class="bg-brandBlue hover:bg-navy text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-lg shadow-md transition transform hover:-translate-y-0.5">
+                Get Instant Quote
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-navy via-brandBlue to-navy text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="bg-blue-900 text-accentBlue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Authorized • Trusted • Local</span>
+                <h1 class="text-3xl sm:text-5xl font-extrabold mt-4 leading-tight">
+                    Your Complete Financial Supermarket in Bokaro & Chas
+                </h1>
+                <p class="mt-4 text-blue-100 text-sm sm:text-base leading-relaxed">
+                    Fast & hassle-free Business Loans, Health & Vehicle Insurance, GST Registration, and Monthly Bookkeeping under one trusted roof.
+                </p>
+                
+                <!-- Power Badges -->
+                <div class="mt-6 pt-6 border-t border-blue-800 flex items-center space-x-6">
+                    <div>
+                        <p class="text-xs text-blue-200">Powered by Loan Network</p>
+                        <p class="font-bold text-lg tracking-wide text-white">andromeda</p>
+                    </div>
+                    <div class="h-8 w-px bg-blue-700"></div>
+                    <div>
+                        <p class="text-xs text-blue-200">Powered by Insurance</p>
+                        <p class="font-bold text-lg tracking-wide text-emerald-400">turtlemint</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Lead Form -->
+            <div id="apply" class="bg-white text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8">
+                <h3 class="text-xl font-bold text-navy mb-1">Apply for Finance or Tax Service</h3>
+                <p class="text-xs text-gray-500 mb-6">Fill in details for instant call back from our Bokaro desk.</p>
+                
+                <form id="leadForm" onsubmit="sendWhatsAppLead(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name</label>
+                        <input type="text" id="clientName" required placeholder="e.g. Kumar Vivek" class="w-full text-sm px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Mobile Number</label>
+                        <input type="tel" id="clientPhone" required placeholder="10-digit mobile number" class="w-full text-sm px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Service Required</label>
+                        <select id="clientService" class="w-full text-sm px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandBlue outline-none bg-white">
+                            <option value="Business/Personal Loan">Business / Personal Loan</option>
+                            <option value="Health / Term Insurance">Health / Term Insurance</option>
+                            <option value="Motor / Vehicle Insurance">Motor / Vehicle Insurance</option>
+                            <option value="GST Filing & Bookkeeping">GST Filing & Monthly Bookkeeping</option>
+                            <option value="Udyam / MSME Registration">Udyam / MSME Registration</option>
+                            <option value="FSSAI Food License">FSSAI License</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg shadow-lg flex items-center justify-center space-x-2 transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Submit via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-navy">Services We Offer</h2>
+            <p class="text-sm text-gray-600 mt-2">Tailored financial and tax solutions for individuals, shopkeepers, and businesses.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- GST & Bookkeeping -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-blue-100 text-brandBlue rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">GST & Bookkeeping</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Monthly GSTR-1 & 3B return filing, Tally accounting maintenance, and annual tax audits for local traders.</p>
+                <span class="text-xs font-semibold text-brandBlue">Monthly Retainers Available &rarr;</span>
+            </div>
+
+            <!-- Business & Personal Loans -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">Bank Loans (DSA)</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Quick unsecured Business Loans, Personal Loans, Home Loans, and LAP through 180+ bank/NBFC partners.</p>
+                <span class="text-xs font-semibold text-emerald-600">Min. Documentation &rarr;</span>
+            </div>
+
+            <!-- Insurance Services -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">Insurance (PoSP)</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Instant quotes and cashless claim support for Health, Term Life, Motor (Car/Bike), and Shopkeeper policies.</p>
+                <span class="text-xs font-semibold text-amber-600">Compare Top Insurers &rarr;</span>
+            </div>
+
+            <!-- MSME & Udyam -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">Udyam Registration</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Official MSME certification setup to unlock government subsidies, priority bank lending, and current accounts.</p>
+                <span class="text-xs font-semibold text-purple-600">Same-Day Issuance &rarr;</span>
+            </div>
+
+            <!-- FSSAI License -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">FSSAI Food License</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Mandatory food safety registration for restaurants, bakeries, grocery stores, and cloud kitchens in Bokaro.</p>
+                <span class="text-xs font-semibold text-red-600">Hassle-Free Setup &rarr;</span>
+            </div>
+
+            <!-- ITR Filing -->
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="font-bold text-lg text-navy mb-2">ITR Filing</h3>
+                <p class="text-xs text-gray-600 leading-relaxed mb-4">Expert Income Tax Return filing for salaried employees, self-employed individuals, and small business owners.</p>
+                <span class="text-xs font-semibold text-teal-600">Max Tax Saving &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Hiring Banner -->
+    <section id="partner" class="bg-gradient-to-r from-gray-900 to-navy text-white py-14 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="bg-emerald-500 text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full">Zero Investment • High Earning</span>
+            <h2 class="text-2xl sm:text-4xl font-bold mt-3">Become a DhanSetu Business Partner / Sub-DSA</h2>
+            <p class="text-gray-300 text-xs sm:text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
+                Are you a local accountant, cyber café operator, freelance agent, or networker in Bokaro or Chas? Partner with DhanSetu on a 100% commission basis and earn high payouts on loans, insurance, and GST services.
+            </p>
+            <div class="mt-6">
+                <a href="https://wa.me/9204730851?text=Hi%20DhanSetu,%20I%20want%20to%20join%20as%20a%20Commission%20Partner/Sub-DSA." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-lg text-sm shadow-lg inline-flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Join as Partner on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-navy text-gray-400 text-xs py-10 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-xl font-bold text-white tracking-tight">Dhan<span class="text-brandBlue">Setu</span></span>
+                <p class="mt-2 text-gray-400 leading-relaxed">Your Trusted Financial & Tax Partner in Bokaro Steel City and Chas, Jharkhand.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#services" class="hover:text-white">Services</a></li>
+                    <li><a href="#partner" class="hover:text-white">Partner Program</a></li>
+                    <li><a href="#apply" class="hover:text-white">Apply for Loan / GST</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Contact Desk</h4>
+                <p class="mb-1"><i class="fa-solid fa-location-dot text-brandBlue mr-2"></i> Bokaro Steel City • Chas, Jharkhand</p>
+                <p class="mb-1"><i class="fa-solid fa-phone text-brandBlue mr-2"></i> 9204730851</p>
+                <p><i class="fa-solid fa-envelope text-brandBlue mr-2"></i> support@dhansetu.in</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-gray-800 text-center text-[11px] text-gray-500">
+            &copy; 2026 DhanSetu. All rights reserved. | Powered by Andromeda & Turtlemint Network.
+        </div>
+    </footer>
+
+    <!-- WhatsApp Redirect Script -->
+    <script>
+        function sendWhatsAppLead(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const service = document.getElementById('clientService').value;
+            
+            // YOUR WHATSAPP NUMBER (Replace 9204730851 with your exact 10-digit number)
+            const targetPhone = "9204730851"; 
+            
+            const message = `*New DhanSetu Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service Requested:* ${encodeURIComponent(service)}`;
+            
+            window.open(`https://wa.me/${targetPhone}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+Save it as index.html
